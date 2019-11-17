@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="metroidvania-game-jam"
+run/main_scene="res://scenes/Enviroment/TestWorld/test_level.tscn"
 config/icon="res://icon.png"
 
 [rendering]
