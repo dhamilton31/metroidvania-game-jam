@@ -36,8 +36,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 7.50793
-height = 4.64225
+radius = 14.4883
+height = 10.5283
 
 [node name="Player" type="Node2D"]
 
@@ -46,7 +46,7 @@ height = 4.64225
 [node name="SpriteSheet" type="Sprite" parent="Sprites"]
 texture = ExtResource( 1 )
 hframes = 24
-frame = 9
+frame = 12
 
 [node name="PlayerAnimator" type="AnimationPlayer" parent="Sprites"]
 anims/Character_Walking = SubResource( 1 )
@@ -57,4 +57,5 @@ anims/Idle = SubResource( 2 )
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -26.7597, 0.418121 )
 shape = SubResource( 3 )
