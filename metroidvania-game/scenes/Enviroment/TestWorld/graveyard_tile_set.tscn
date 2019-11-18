@@ -10,13 +10,13 @@
 [ext_resource path="res://assets/enviroments/graveyard/spikes.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 35.9598, 13.3778 )
+extents = Vector2( 32.8696, 13.3778 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.3068, 4.70271 )
+extents = Vector2( 23.2775, 4.70271 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 17.3067, 12.2237 )
+extents = Vector2( 31.7643, 12.2237 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 16.1945, 7.47054 )
@@ -24,28 +24,26 @@ extents = Vector2( 16.1945, 7.47054 )
 [node name="graveyard_tile_set" type="Node2D"]
 
 [node name="grass_flat" type="Sprite" parent="."]
-editor/display_folded = true
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="grass_flat"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grass_flat/StaticBody2D"]
-position = Vector2( -4.94334, 8.83002 )
+position = Vector2( -0.15343, 19.6073 )
 shape = SubResource( 1 )
 
 [node name="pillar_middle_vine" type="Sprite" parent="."]
-position = Vector2( 117.942, 35.8486 )
+position = Vector2( 123.929, 40.0398 )
 texture = ExtResource( 2 )
 
 [node name="pillar_top" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 190.575, -13.6439 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="pillar_top"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pillar_top/StaticBody2D"]
-position = Vector2( 0.880249, -12.3235 )
+position = Vector2( -1.51468, -6.33611 )
 shape = SubResource( 2 )
 
 [node name="pillar_bottom" type="Sprite" parent="."]
@@ -55,11 +53,11 @@ texture = ExtResource( 4 )
 [node name="StaticBody2D" type="StaticBody2D" parent="pillar_bottom"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pillar_bottom/StaticBody2D"]
-position = Vector2( 3.52103, 17.2038 )
+position = Vector2( 0.527317, 20.1975 )
 shape = SubResource( 3 )
 
 [node name="pillar_middle" type="Sprite" parent="."]
-position = Vector2( 97.708, -26.4076 )
+position = Vector2( 83.9371, -59.3382 )
 texture = ExtResource( 5 )
 
 [node name="slope_down" type="Sprite" parent="."]
