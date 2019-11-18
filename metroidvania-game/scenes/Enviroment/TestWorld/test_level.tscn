@@ -9,7 +9,7 @@ position = Vector2( 124, 53 )
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 format = 1
-tile_data = PoolIntArray( 65534, 0, 0, 65535, 0, 0, 0, 0, 0 )
+tile_data = PoolIntArray( 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 131081, 2, 0, 131082, 2, 0, 131083, 2, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -70.5314, 1.1376 )

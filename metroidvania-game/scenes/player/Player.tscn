@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/Character_Sprite_Sheet.png" type="Texture" id=2]
@@ -17,10 +17,42 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.113703, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+"values": [ 16, 18, 20, 22, 24, 26, 30 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Character_jumping_down"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 44 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Character_jumping_up"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 42 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -35,38 +67,36 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 0, 2 ]
 }
 
 [node name="Player" type="Node2D"]
-position = Vector2( 21.4739, 1.49128 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( -25.5819, -5.25436 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -0.595943, 3.34495 )
 shape = SubResource( 1 )
 
 [node name="Sprites" type="Node2D" parent="KinematicBody2D"]
-editor/display_folded = true
-position = Vector2( 25.5819, 5.25436 )
+position = Vector2( 24.7457, 5.25436 )
 
 [node name="SpriteSheet" type="Sprite" parent="KinematicBody2D/Sprites"]
+position = Vector2( -20.4879, -0.836243 )
 texture = ExtResource( 2 )
-hframes = 24
-frame = 12
+hframes = 48
+frame = 42
 
 [node name="PlayerAnimator" type="AnimationPlayer" parent="KinematicBody2D/Sprites"]
 anims/Character_Walking = SubResource( 2 )
+anims/Character_jumping_down = SubResource( 4 )
+anims/Character_jumping_up = SubResource( 5 )
 anims/Idle = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( 1.7491, 4.83624 )
+current = true
