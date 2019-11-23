@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ 16, 18, 20, 22, 24, 26, 30 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Character_jumping_down"
 length = 0.1
 tracks/0/type = "value"
@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ 44 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "Character_jumping_up"
 length = 0.1
 tracks/0/type = "value"
@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ 42 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteSheet:frame")
@@ -93,10 +93,11 @@ frame = 42
 
 [node name="PlayerAnimator" type="AnimationPlayer" parent="KinematicBody2D/Sprites"]
 anims/Character_Walking = SubResource( 2 )
-anims/Character_jumping_down = SubResource( 4 )
-anims/Character_jumping_up = SubResource( 5 )
-anims/Idle = SubResource( 3 )
+anims/Character_jumping_down = SubResource( 3 )
+anims/Character_jumping_up = SubResource( 4 )
+anims/Idle = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( 1.7491, 4.83624 )
 current = true
+
